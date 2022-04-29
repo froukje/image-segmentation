@@ -497,6 +497,7 @@ def main(args):
 
 
         # save predictions on validation set
+        # predictions and masks are saved as one-hot encoded arrays
 
         ## transfer predictions to cpu if necessary and convert to numpy array
         
@@ -529,7 +530,7 @@ if __name__ == '__main__':
     # data properties
     parser.add_argument('--img-size', type=int, default=64)
     parser.add_argument('--channels', type=int, default=3)
-    parser.add_argument('--classes', type=int, default=1) # 1 for binary classification
+    parser.add_argument('--classes', type=int, default=23) # 1 for binary classification
     # train parameters
     parser.add_argument('--batch-size', type=int, default=64)
     parser.add_argument('--epochs', type=int, default=10)
